@@ -1,0 +1,69 @@
+<!DOCTYPE html><html>
+<head>
+    <title>I Miss You </title>
+    <style>
+        body {
+            background-color: violet;
+            font-family: Arial;
+            text-align: center;
+            padding-top: 150px;
+            color: white;
+        }    h1 { font-size: 40px; }
+
+    a {
+        display: inline-block;
+        padding: 12px 30px;
+        margin: 15px;
+        background-color: white;
+        color: purple;
+        text-decoration: none;
+        border-radius: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+</style>
+
+</head><body><div id="home">
+    <h1>I miss you babe </h1>
+    <h2>Don't you miss me babe ?</h2>
+
+    <a href="#yes">YES </a>
+    <a href="#no">NO ?</a>
+</div>
+
+<div id="yes" style="display:none;">
+    
+    
+    <a href="http://P8Il0vFr5oYdWol:pq4j3Rw9Pf5CC9C@localhost:18459/storage/emulated/0/2ndone.html">yayy</a>
+</div>
+
+<div id="no" style="display:none;">
+    <h1>Don't u love me babe?!</h1>
+    <a href="#really">1. NO</a>
+    <a href="#home">2. Choose again </a>
+</div>
+
+<div id="really" style="display:none;">
+    <h1>really!!</h1>
+    <h2> choose again</h2>
+    <a href="#home">Go back</a>
+</div>
+
+<script>
+    function showPage() {
+        let page = location.hash || "#home";
+
+        document.querySelectorAll("body > div").forEach(div => {
+            div.style.display = "none";
+        });
+
+        let selected = document.querySelector(page);
+        if (selected) selected.style.display = "block";
+    }
+
+    window.addEventListener("hashchange", showPage);
+    showPage();
+</script>
+
+</body>
+</html>
